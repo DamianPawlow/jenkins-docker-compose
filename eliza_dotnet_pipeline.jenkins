@@ -1,0 +1,22 @@
+pipeline {
+  agent any
+  stages {
+    stage('Checkout Scm') {
+      steps {
+        git branch: 'main', url: 'https://github.com/elizazych/TestUnitExample'
+      }
+    }
+
+    stage('dotnet build') {
+      steps {
+        dotnetBuild()
+      }
+    }
+
+    stage('dotnet test') {
+      steps {
+        dotnetTest()
+      }
+    }
+  }
+}
