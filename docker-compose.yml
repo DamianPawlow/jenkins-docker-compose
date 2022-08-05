@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  jenkins:
+    build: .
+    image: jenkins/dotnet
+    ports:
+      - "8080:8080"
