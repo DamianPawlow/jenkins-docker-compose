@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout Scm') {
       steps {
-        git branch: 'main', url: 'https://github.com/elizazych/TestUnitExample'
+        git branch: 'main', url: 'https://github.com/<YOUR_GITHUB_USERNAME>/TestUnitExample'
       }
     }
 
